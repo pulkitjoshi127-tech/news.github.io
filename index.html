@@ -1,0 +1,54 @@
+<html>
+<head>
+  <title>News</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: black;
+      color: white;
+      font-family: Arial;
+      overflow: hidden;
+    }
+
+    #loading {
+      font-size: 40px;
+      animation: blink 1s infinite;
+    }
+
+    #prank {
+      font-size: 100px;
+      display: none;
+      animation: pop 0.6s ease-out;
+    }
+
+    @keyframes blink {
+      0%,100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    @keyframes pop {
+      0% { transform: scale(0); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="loading">Loading...</div>
+  <div id="prank">April Fool 😜</div>
+
+  <script>
+    setTimeout(() => {
+      document.getElementById("loading").style.display = "none";
+      document.getElementById("prank").style.display = "block";
+    }, 3000); // 3 seconds delay
+  </script>
+
+</body>
+</html>
